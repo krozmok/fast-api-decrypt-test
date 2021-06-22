@@ -5,6 +5,7 @@ version: '3.8'
 services:
   decrypt_api:
     build: .
+    image: p0lcatha/decrypt-test:latest
     command: bash -c 'while !</dev/tcp/db/5432; do sleep 1; done; uvicorn app.main:decrypt_app --host 0.0.0.0'
     volumes:
       - .:/app
@@ -15,7 +16,8 @@ services:
     depends_on:
       - db
   db:
-    image: postgres:13-alpine
+    #image: postgres:13-alpine
+    image: p0lcatha/postgres-config
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     expose:
