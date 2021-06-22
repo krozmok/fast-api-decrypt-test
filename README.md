@@ -13,7 +13,7 @@ La API fue desarrollada con el uso de las siguientes librerias:
 
 ```
 git clone <repository>
-cd fast-api-decrypt-test-master
+cd fast-api-decrypt-test
 docker-compose -d --build
 ```
 
