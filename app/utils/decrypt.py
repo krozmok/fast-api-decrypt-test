@@ -50,4 +50,4 @@ if __name__ == "__main__":
     ntgzq fxshidrp. z vcpa htya ai qiyqxyadtax iy aex atpf. aeta'p aex otpzq
     zrxt. pi z etkx adzxr ai ntfx dcos qirx qiyqzpx tyr pcqqzyqa.
     scfzezdi ntapcniai. (hhh.tdaznt.qin/zyak/dcos)"""
-    decrypt(freqlang, text)
+    print(decrypt(freqlang, text))
