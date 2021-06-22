@@ -10,7 +10,9 @@ def decrypt(freqlang, text):
                 else:
                     frequency[character] = 1
                 
-        sorted_frequency = dict(sorted(frequency.items(), key=lambda item: item[1], reverse=True))
+        sorted_frequency = dict(sorted(frequency.items() 
+                                       ,key=lambda item: item[1]
+                                       ,reverse=True))
 
         dict_character_matches = {}
         i = 0

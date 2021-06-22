@@ -13,7 +13,7 @@ La API fue desarrollada con el uso de las siguientes librerias:
 
 ```
 docker pull p0lcatha/postgres-config:latest
-docker pull p0lcatha/decrypt-test
+docker pull p0lcatha/decrypt-test:1.2
 git clone https://github.com/krozmok/fast-api-decrypt-test.git
 cd fast-api-decrypt-test
 docker-compose up -d

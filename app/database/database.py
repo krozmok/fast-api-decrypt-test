@@ -9,22 +9,22 @@ from app.config import settings
 def init_db(app: FastAPI) -> None:
     Tortoise.init_models(["app.models.models"], "models")
     register_tortoise(
-        app,
+        app
         #db_url=os.environ.get("POSTGRES_CONNECTION_STRING"),
-        db_url=settings.db_url,
-        modules={"models":["app.models.models"]},
-        generate_schemas=True,
-        add_exception_handlers=True
+        ,db_url=settings.db_url
+        ,modules={"models":["app.models.models"]}
+        ,generate_schemas=True
+        ,add_exception_handlers=True
     )
     Tortoise.generate_schemas()
 
 TORTOISE_ORM = {
-    "connections": {"default": settings.db_url},
+    "connections": {"default": settings.db_url}
     #{"default": os.environ.get("POSTGRES_CONNECTION_STRING")}
-    "apps": {
+    ,"apps": {
         "models": {
-            "models": ["app.models.models",],
-            "default_connection": "default"
+            "models": ["app.models.models",]
+            ,"default_connection": "default"
         },
     },
 }
